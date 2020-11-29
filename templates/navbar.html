@@ -1,0 +1,79 @@
+<!-- nav bar section -->
+{% if not username: %}
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}"><img width="70px" src="/local/images/nav-logo.svg"
+                alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="hamburger-toggler fa fa-bars" aria-hidden="true"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}"><button type="button"
+                            class="btn nav-bar-button btn-outline-primary">Home</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('login') }}"><button type="button"
+                            class="btn nav-bar-button btn-outline-primary">Log In</button></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+{% else: %}
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('index') }}"><img width="70px" src="/local/images/nav-logo.svg"
+                alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span><i class="hamburger-toggler fa fa-bars" aria-hidden="true"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="mr-auto"></ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}"><button type="button"
+                            class="btn nav-bar-button btn-outline-primary">Home</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('dashboard') }}"><button type="button"
+                            class="btn nav-bar-button btn-outline-primary">Dashboard</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('account') }}"><button type="button"
+                            class="btn nav-bar-button btn-outline-primary">Account</button></a>
+                </li>
+
+                {% if acc_num > 2: %}
+
+                {% endif %}
+
+
+                {% if acc_num > 1: %}
+                    <li class="nav-item">
+                        <a href="{{ url_for('accman') }}"><button type="button"
+                                class="btn nav-bar-button btn-outline-primary">Acc Man</button></a>
+                    </li>
+                {% endif %}
+
+
+                {% if acc_num > 0: %}
+
+                {% endif %}
+
+                <li class="nav-item">
+                    <button type="button" class="btn nav-bar-button btn-outline-primary logout-btn">Log out</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% endif %}

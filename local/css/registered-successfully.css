@@ -1,0 +1,36 @@
+.fa-check-circle{
+    font-size: 200px;
+    color: #f96b23;
+}
+
+.container{
+    font-size: 18px;
+    text-align: center;
+    color:#333;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+.login-button{
+    width: 150px;
+    height: 49px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #f96b23;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.login-button:hover{
+    background-color: #c25117;
+}

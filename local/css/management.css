@@ -1,0 +1,251 @@
+.search-input{
+    width: 100%;
+    background: none;
+    outline: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333; 
+}
+
+.account-row{
+    width: 100%;
+    border-width: 1px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: orange;
+    margin: 10px 0px;
+    color: #333;
+    font-size: 20px;
+}
+.account-row table{
+    width: 100%;
+}
+
+.account-row table td{
+    width: 50%;
+    text-align: center;
+}
+
+.btnv{
+    width: 80px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: #f96b23;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.btnv:hover{
+    background-color: #c25117;
+    color:white;
+}
+
+
+
+.popup-window{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    padding: 50px;
+    z-index: 10;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c25117;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: #aaa;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+
+
+
+.hidden{
+    background-color: rgba(0, 0, 0, 0);
+    border:none;
+    margin-left: 97%;
+}
+
+
+.fa-times{
+    font-size: 50px;
+    color: #f96b23;
+}
+
+.input-field{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0.0);
+    margin: 20px auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #f96b23;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85% ;
+    padding: 0.4rem;
+    color: #aaa;
+}
+
+
+.input-field .input-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field i{
+    color: #f96b23;
+    transition: 0.5s;
+    font-size: 1.1rem;
+}
+
+.input-field input{
+    border: none;
+    width: 90%;
+    background: none;
+    outline: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #aaa; 
+}
+
+.input-field input::placeholder{
+    color: #aaa;
+    font-weight: 500;
+}
+
+.errors{
+  color: red;
+  font-size: 13px;
+  height: 15px;
+  text-align: center;
+}
+
+.input-select{
+    margin: 20px auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #f96b23;
+    border-radius: 55px;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #aaa;
+    font-size: 1.1rem;
+    width: 140px;
+    height: 45px;
+}
+
+.account-type{
+    border-width: 0px;
+    border-radius: 55px;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.divder{
+    color: #aaa;
+    border-color: #aaa;
+    margin: 40px auto;
+    width: 50%;
+}
+
+.man-table{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.man-table td{
+    padding: 20px;
+    text-align: left;
+}
+
+.popup-headers{
+    color: #aaa;
+    font-size: 22;
+}
+
+
+.sbtn{
+    height: 49px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f96b23;
+    border-radius: 49px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    color: #f96b23;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+    padding: 0px 20px;
+}
+
+.sbtn:hover{
+    background-color: #f96b23;
+    border-color: #f96b23;
+    color: #ddd;
+}
+
+
+.id{
+    display: none;
+}
+
+.success-screen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+
+.fail-screen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.fa-check{
+    font-size: 200px;
+    color: #f96b23;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.fail-icon{
+    font-size: 200px;
+    color: #f96b23;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+::-webkit-scrollbar-track {
+  margin: 12px 0px;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+

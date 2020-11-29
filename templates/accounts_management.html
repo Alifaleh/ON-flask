@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="disabled">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>ON - Account info</title>
+    <link rel="icon" href="/local/images/favicon.ico">
+
+    <!-- bootstrap styles -->
+    <link rel="stylesheet" href="/local/css/bootstrap.min.css">
+
+
+    <!-- aos style -->
+    <link rel="stylesheet" href="/local/css/aos.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/local/css/style.css">
+    <link rel="stylesheet" href="/local/css/loggedin.css">
+    <link rel="stylesheet" href="/local/css/management.css">
+    <link rel="stylesheet" href="/local/css/loading-screen.css">
+</head>
+<div class="loading-screen">
+    <div class="first-spiner"></div>
+    <div class="second-spiner"></div>
+    <img class="logo" src="/local/images/loading-logo.svg" alt="" />
+</div>
+<div class="success-screen"> <i class="fas fa-check"></i> </div>
+<div class="fail-screen"> <i class="fas fail-icon fa-times"></i></i> </div>
+<body>
+    {% include 'navbar.html' %}
+    <div class="navbar-fix-div" ></div>
+    <div class="account-container container">
+        <div>
+            <div class="input-field">
+                <div class="input-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input class="search-input" type="text">
+            </div>
+
+            <div class="appending-div">
+            </div>
+
+
+            <div class="popup-window">
+                <button class="hidden"><i class="fas fa-times"></i></button>
+                <div class="popup-content">
+                    <input class="id" type="password">
+                    <div class="input-field">
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <input class="reg-input" type="text" placeholder="Username" name='username' id='man-uname'>
+                    </div>
+                    <div class='errors' id="username-error"></div>
+                    <div class="input-field" id="test">
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <input class="reg-input" type="text" placeholder="Email" name='email' id='man-email'>
+                    </div>
+                    <div class='errors' id="email-error"></div>
+
+                    <select class="input-select" >
+                        <option value="False">Unverified</option>
+                        <option value="True">Verified</option>
+                    </select>
+
+
+                    <div class="input-field">
+                        <div class="input-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <select class="account-type">
+                            <option value="0">User</option>
+                            <option value="1">Operator</option>
+                            <option value="2">Admin</option>
+                            <option value="3">Manager</option>
+                            <option value="4">Super User</option>
+                        </select>
+                    </div>
+                    <div class='errors' id="account_type-error"></div>
+
+                    <hr class="divder">
+
+                    <h2 class="popup-headers" id='sessions-header'></h2>
+
+                    <div>
+                        <table class='sessions-table man-table'>
+    
+                        </table>
+                    </div>
+
+                    <hr class="divder">
+
+                    <h2 class="popup-headers">Password reset code</h2>
+
+                    <div>
+                        <table class='pr-table man-table'>
+
+                        </table>
+                    </div>
+
+                    <input class="sbtn spr" type="button" value=" Send Password Reset ">
+
+                    <hr class="divder">
+
+                    <h2 class="popup-headers">email verification code</h2>
+
+                    <div>
+                        <table class='ev-table man-table'>
+                            
+                        </table>
+                    </div>
+
+                    <input class="sbtn sev" type="button" value=" Send Email verification ">
+                    
+                </div>
+                <hr class="divder">
+                <input class="sbtn ac" type="button" value=" Apply changes ">
+            </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/local/js/jQuery.js"></script>
+    
+    <!-- scripts -->
+    <script src="/local/js/navbar.js"></script>
+    <script src="/local/js/accounts_management.js"></script>
+
+    <!-- bootstrap scripts -->
+    <script src="/local/js/bootstrap.min.js"></script>
+</body>
+
+</html>

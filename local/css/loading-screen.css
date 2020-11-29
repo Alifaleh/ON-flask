@@ -1,0 +1,118 @@
+.loading-screen{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 20;
+    top: 0px;
+    left: 0px;
+}
+
+.logo{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+}
+
+.first-spiner{
+    display: inline-block;
+    border: 4px solid rgba(0,0,0,0);
+    border-radius: 50%;
+    border-left: 4px solid #DC3627;
+    border-right: 4px solid #DC3627;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: calc(50% - 125px);
+    left: calc(50% - 125px);
+}
+
+.second-spiner{
+    display: inline-block;
+    border: 4px solid rgba(0,0,0,0);
+    border-radius: 50%;
+    border-top: 4px solid #FFE267;
+    border-bottom: 4px solid #FFE267;
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    top: calc(50% - 120px);
+    left: calc(50% - 120px);
+}
+
+/* animations */
+
+@keyframes first-spiner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.first-spiner{
+    animation-name: first-spiner;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes second-spiner{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.second-spiner{
+    animation-name: second-spiner;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo{
+    0%{
+        width: 150px;
+        height: 150px;
+        top: calc(50% - 75px);
+        left: calc(50% - 75px);
+    }
+    25%{
+        width: 210px;
+        height: 210px;
+        top: calc(50% - 105px);
+        left: calc(50% - 105px);
+    }
+    40%{
+        width: 150px;
+        height: 150px;
+        top: calc(50% - 75px);
+        left: calc(50% - 75px);
+    }
+    55%{
+        width: 210px;
+        height: 210px;
+        top: calc(50% - 105px);
+        left: calc(50% - 105px);
+    }
+    100%{
+        width: 150px;
+        height: 150px;
+        top: calc(50% - 75px);
+        left: calc(50% - 75px);
+    }
+}
+
+.logo{
+    animation-name: logo;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
