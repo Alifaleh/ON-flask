@@ -175,7 +175,7 @@
 
 .popup-headers{
     color: #aaa;
-    font-size: 22;
+    font-size: 36px;
 }
 
 
@@ -200,6 +200,27 @@
     color: #ddd;
 }
 
+@media(max-width:474px){
+    
+    .sbtn{
+        font-size: 20px;
+    }
+    .popup-headers{
+        font-size: 25px;
+    }
+    .man-table td{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:375px){
+    .sbtn{
+        font-size: 15px;
+    }
+    .man-table td{
+        font-size: 8px;
+    }
+}
 
 .id{
     display: none;
