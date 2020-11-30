@@ -5,7 +5,7 @@ from inc.mailsender import MailSender
 
 # ON network Email
 Email = 'on.iot.iq@gmail.com'
-password = '123Qwe@@'
+password = 'kuuaxamejwxtmqua'
 
 # Admin Email
 adminEmail='Alifalih783783@gmail.com'
