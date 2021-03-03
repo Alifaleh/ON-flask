@@ -95,12 +95,13 @@ def loginValidator(username,password):
         where username= '{username}' and password='{password}' and verified = true
         '''.format(username=username,password=password)
         res1=db.sendQuery(q)
-
+        
         q='''
         select username from users
         where username= '{username}' and password='{password}'
         '''.format(username=username,password=password)
         res2=db.sendQuery(q)
+
         if len(res1)!=len(res2):
             error="password: Please verify your email address before logging in."
         elif len(res1)==len(res2)==0:

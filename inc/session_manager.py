@@ -23,6 +23,9 @@ def setSession(username,user_agent,resp):
     '''.format(username=username)
     user_id=db.sendQuery(q)[0][0]
 
+    print('reached....')
+
+    print(user_agent)
     # inserting the new session information into the database:
     q='''
         INSERT INTO sessions (u_id,user_agent, session_key, time)
@@ -32,7 +35,7 @@ def setSession(username,user_agent,resp):
         );
     '''.format(user_id=user_id,user_agent=user_agent,code=code)
     res=db.sendQuery(q)
-
+    
     # returning the response with the cookies:
     resp.set_cookie('onenetworkcookie', '{}/**/{}'.format(username,code),httponly = True,max_age=60 * 60 * 24 * 30)
     return resp

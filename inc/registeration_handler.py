@@ -4,7 +4,7 @@ import inc.email_handler as EH
 
 
 # host='http://onnetwork.ddns.net'
-host='http://192.168.3.40:8000'
+host='http://192.168.0.105:8000'
 
 
 def register(username,email,password):
