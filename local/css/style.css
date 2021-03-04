@@ -28,7 +28,7 @@ body{
     color: rgb(249, 107, 35);
     border-color: rgb(249, 107, 35);
     margin: 10px 10px;
-    width: 100px;
+    width: 120px;
 }
 
 
@@ -50,6 +50,8 @@ body{
     position: fixed;
     z-index: 10;
     width: 100%;
+    top: 0px;
+    left: 0px;
 }
 
 .navbar-toggler{
@@ -126,7 +128,7 @@ body{
 }
 
 .card{
-    height: 400px;
+    height: 440px;
     width: 300px;
     box-shadow: 1px 1px 10px 2px;
     margin: 20px 20px;
@@ -137,22 +139,44 @@ body{
 }
 
 .card img{
-    /*box-shadow: 1px 1px 10px 2px black;*/
-    height: 175px;
+    width: 100%;
+    height: 180px;
     border-radius: 10px;
 }
 
 
 .card h1{
-    margin-top: 4px;
+    margin-top: 8px;
+    font-size: 30px;
     color: rgb(249, 107, 35);
     font-family: 'Oswald', sans-serif;
 }
 
-.card p{
+.card-desc{
+    height: 150px;
+    width: 285px;
+    margin-top: 5px;
+    padding-right: 5px;
     color: #cdc9c3;
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
+    word-wrap: break-word;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.card-price{
+    margin-right: 10px;
+    font-size: 30px;
+    color: #f96b23;
+}
+
+.card-col{
+    height: 100%;
+}
+
+p{
+    margin: 0px;
 }
 
 .mycol{
@@ -198,19 +222,20 @@ body{
 
 ::-webkit-scrollbar {
     width: 5px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: rgb(249, 107, 35);
     border-radius: 10px;
-  }
+}
+
 
 .disabled {
     overflow-x: hidden; 

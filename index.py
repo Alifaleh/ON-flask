@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory, request, redirect, url_for, abort, session, make_response
+from flask import Flask, render_template, send_from_directory, request, redirect, url_for, abort, session, make_response, jsonify, Markup
 
 import inc.validator as val
 
@@ -22,6 +22,8 @@ import inc.acc_man_handler as AMH
 
 import inc.email_handler as EH
 
+import inc.home_man_handler as HMH
+
 app=Flask(__name__)
 
 
@@ -30,6 +32,9 @@ def turnicate(string,lower=True):
     string=string.replace(" ","")
     string=string.replace(",","")
     string=string.replace("`","")
+    string=string.replace("'","")
+    string=string.replace('"',"")
+    string=string.replace("--","")
     string=string.replace("\n","")
     if lower:
         string=string.lower()
@@ -37,13 +42,16 @@ def turnicate(string,lower=True):
 
 @app.route('/')
 def index():
+    cards=HMH.getCards()
     cookieValue = request.cookies.get('onenetworkcookie')
     if sm.hasSession(cookieValue,"{} {}".format(request.user_agent.platform,request.user_agent.browser)):
         username=cookieValue.split('/**/')[0]
         email,acc_type,acc_num=AIH.getAccountInfo(username)
-        return render_template('home.html',username=username, acc_num=acc_num)
+        return render_template('home.html',username=username, acc_num=acc_num, cards=cards)
     else:
-        return render_template('home.html')
+        return render_template('home.html', cards=cards)
+
+
 
 @app.route('/local/<path>/<filename>')
 def send_file(path,filename):
@@ -394,10 +402,94 @@ def setpw():
         abort(404)
 
 
+@app.route('/home-man')
+def homeMan():
+    cookieValue = request.cookies.get('onenetworkcookie')
+    if sm.hasSession(cookieValue,"{} {}".format(request.user_agent.platform,request.user_agent.browser)):
+        username=cookieValue.split('/**/')[0]
+        email,acc_type,acc_num=AIH.getAccountInfo(username)
+        if acc_num > 2:
+            return render_template('home-man.html',username=username,acc_num=acc_num)
+        else:
+            abort(404)
+    else:
+        return redirect(url_for('login'))
+
+
+@app.route('/home-man-ap',methods=['POST','GET'])
+def homeManAp():
+    cookieValue = request.cookies.get('onenetworkcookie')
+    if sm.hasSession(cookieValue,"{} {}".format(request.user_agent.platform,request.user_agent.browser)):
+        username=cookieValue.split('/**/')[0]
+        email,acc_type,acc_num=AIH.getAccountInfo(username)
+        if acc_num > 2:
+            if request.method=='POST':
+                title=str(request.form.get('title'))
+                price=request.form.get('price')
+                order=request.form.get('order')
+                discription=request.form.get('discription')
+                image= request.form.get('image')
+                imageName= request.form.get('imagename')
+                response=HMH.add_product(title, price, order, discription, image, imageName, request)
+                return response
+        else:
+            abort(404)
+    else:
+        return redirect(url_for('login'))
+
+
+
+@app.route('/home-man-get-products',methods=['POST','GET'])
+def homeManGp():
+    cookieValue = request.cookies.get('onenetworkcookie')
+    if sm.hasSession(cookieValue,"{} {}".format(request.user_agent.platform,request.user_agent.browser)):
+        username=cookieValue.split('/**/')[0]
+        email,acc_type,acc_num=AIH.getAccountInfo(username)
+        if acc_num > 2:
+            if request.method=='POST':
+                response=HMH.getProducts()
+                return response
+            else:
+                abort(404)
+        else:
+            abort(404)
+    else:
+        return redirect(url_for('login'))
+
+
+
+@app.route('/home-man-mod-products',methods=['POST','GET'])
+def homeManMp():
+    cookieValue = request.cookies.get('onenetworkcookie')
+    if sm.hasSession(cookieValue,"{} {}".format(request.user_agent.platform,request.user_agent.browser)):
+        username=cookieValue.split('/**/')[0]
+        email,acc_type,acc_num=AIH.getAccountInfo(username)
+        if acc_num > 2:
+            if request.method=='POST':
+                p_id=request.form.get('id')
+                mode=request.form.get('mode')
+                title=request.form.get('title')
+                price=request.form.get('price')
+                order=request.form.get('order')
+                discription=request.form.get('discription')
+                image= request.form.get('image')
+                imageName= request.form.get('imagename')
+                response=HMH.modifyProduct(p_id, mode, title, price, order, discription, image, imageName, request)
+                return response
+            else:
+                abort(404)
+        else:
+            abort(404)
+    else:
+        return redirect(url_for('login'))
+
+
+
+
 @app.errorhandler(404)
 def page_not_found(error):
    return render_template('404.html', title = '404'), 404
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host='192.168.0.105',port=8000)
+    app.run(debug=True,host='192.168.3.40',port=8000)

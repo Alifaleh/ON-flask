@@ -22,6 +22,7 @@
 
     <!-- styles -->
     <link rel="stylesheet" href="/local/css/style.css">
+    <link rel="stylesheet" href="/local/css/layout.css">
 </head>
 
 <body>
@@ -44,125 +45,44 @@
 
     <!-- cards section -->
     <section>
-        <div class="container">
-            <div class="row justify-content-center" data-aos="fade-right">
-                <div class="section-header-border">
-                    <h1 class="section-header">OUR PRODUCTS</h1>
+        <div class="my-container">
+            <div class="my-row main-aa-center" data-aos="fade-right">
+                <div class='cell'>
+                    <div class="section-header-border">
+                        <h1 class="section-header">OUR PRODUCTS</h1>
+                    </div>
                 </div>
             </div>
             <!-- cards -->
-            <div class="row justify-content-around">
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 1</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 2</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 3</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 4</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 5</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 6</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 7</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 8</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12-xs col-12-sm col-6-md col-4-lg">
-                    <div>
-                        <div class="card" data-aos="zoom-out">
-                            <img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg" alt="">
-                            <div class="card-text">
-                                <h1>Sensor 9</h1>
-                                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                                    the industry's standard dummy text.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="cards-holder my-row main-aa-sp-ev wrap">
+                {{ cards }}
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- footer section -->
@@ -170,7 +90,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xs-4 link-div">
-                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i>&nbsp;
+                    <a href="https://www.facebook.com/onenetwork.iq" target="_blank"><i class="fab fa-facebook-f"></i>&nbsp;
                         <p>
                             facebook</p></a>
                 </div>
@@ -180,7 +100,7 @@
                             linkedin</p></a>
                 </div>
                 <div class="col-xs-4 link-div">
-                    <a href="#" target="_blank"><i class="fas fa-at"></i>&nbsp;<p>
+                    <a href="mailto: on.iot.iq@gmail.com" target="_blank"><i class="fas fa-at"></i>&nbsp;<p>
                             Email</p>
                     </a>
                 </div>

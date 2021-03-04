@@ -187,7 +187,6 @@ $('.ac').on('click tap touch',function() {
     $('.popup-window').css('display','none');
     $('.loading-screen').css('display','block');
 
-    $(".register-submit").prop('disabled', true);
     var id = $(".id").val();
     var uname = $("#man-uname").val();
     var email = $("#man-email").val();

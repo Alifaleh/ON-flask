@@ -147,6 +147,11 @@ form.sign-up-form{
     color: #333; 
 }
 
+.input-field textarea{
+  height: 200px;
+  background-color: #f96b23;
+}
+
 .input-field input::placeholder{
     color: #aaa;
     font-weight: 500;

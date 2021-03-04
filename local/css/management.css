@@ -124,13 +124,65 @@
 }
 
 .input-field input::placeholder{
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #aaa; 
+}
+
+.input-field input[type='file']{
+    background-color: rgba(0, 0, 0, 0);
+    padding: auto;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #aaa; 
+    padding-top: 8px;
+}
+
+.input-field input[type='file']:hover{
+    cursor: pointer;
+}
+
+.input-field input[type='file']::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 0px;
+}
+
+.input-field-textarea{
+    max-width: 380px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.0);
+    margin: 20px auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #f96b23;
+    border-radius: 55px;
+    padding: 20px;
+    color: #aaa;
+}
+
+.input-field-textarea textarea{
+    height: 100%;
+    width: 100%;
+    resize: none;
+    padding-right: 0px;
+    margin-right: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #aaa;
+}
+
+.input-field-textarea textarea:focus{
+    outline-width: 0px;
+}
+
+.input-field-textarea textarea::placeholder{
     color: #aaa;
     font-weight: 500;
 }
 
 .errors{
   color: red;
-  font-size: 13px;
+  font-size: 15px;
   height: 15px;
   text-align: center;
 }
@@ -200,6 +252,17 @@
     color: #ddd;
 }
 
+.dp{
+    border-color: #f92323;
+    color: #f92323;
+}
+
+.dp:hover{
+    background-color:#f92323;
+    border-color: #f92323;
+    color: #ddd;
+}
+
 @media(max-width:474px){
     
     .sbtn{
@@ -229,20 +292,24 @@
 .success-screen{
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 20;
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
+    top: 0px;
+    left: 0px;
 }
 
 
 .fail-screen{
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 20;
     background-color: rgba(0, 0, 0, 0.7);
     display: none;
+    top: 0px;
+    left: 0px;
 }
 
 .fa-check{
@@ -264,9 +331,101 @@
 }
 
 
+
+.add-prodect{
+    background-color: #333;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    color:  #f96b23;
+}
+
+.add-prodect-icon{
+    font-size: 50px;
+}
+
+.hm-content{
+    margin-top: 100px;
+}
+
+
+
+
+.add-product{
+    background-color: #333;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #f96b23;
+    border-radius: 10px;
+    color:  #f96b23;
+    outline: 0px solid rgba(0, 0, 0, 0);
+}
+
+.add-product:focus{
+    border: 1px solid #f96b23;
+    outline: 0px solid rgba(0, 0, 0, 0);
+}
+
+.add-product-icon{
+    font-size: 50px;
+}
+
+.add-product-icon:hover{
+    color: #ce5214;
+}
+
+.hm-content{
+    margin-top: 100px;
+}
+
+
+.card-desc{
+    height: 100px;
+}
+
+
+.modify-card{
+    height: 50px;
+    width: 50px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.modify-card:focus{
+    border: 0px solid rgba(0, 0, 0, 0);
+    outline: 0px solid rgba(0, 0, 0, 0);
+}
+
+.modify-card-icon{
+    font-size: 35px;
+    color: #f96b23;
+}
+
+.modify-card-icon:hover{
+    color: #ce5214;
+}
+
+
+.product-mod-window{
+    position: fixed;
+    width: 100%;
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-width: 1140px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border: 1px solid #f96b23;
+    padding: 10px;
+    display: none;
+}
+
+
 ::-webkit-scrollbar-track {
   margin: 12px 0px;
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
-

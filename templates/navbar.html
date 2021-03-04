@@ -51,8 +51,15 @@
                             class="btn nav-bar-button btn-outline-primary">Account</button></a>
                 </li>
 
-                {% if acc_num > 2: %}
+                {% if acc_num > 3: %}
 
+                {% endif %}
+
+                {% if acc_num > 2: %}
+                    <li class="nav-item">
+                        <a href="{{ url_for('homeMan') }}"><button type="button"
+                                class="btn nav-bar-button btn-outline-primary">Home Man</button></a>
+                    </li>
                 {% endif %}
 
 
